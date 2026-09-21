@@ -39,43 +39,58 @@ void screen1(string head, string ehead, string body, string legs, string hp, str
     cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
 }
 
-void screenedamage(string head, string ehead2, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
-    cout << "\n\n\n\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
-    cout << hod1 << head << prost << ehead2 << "\n";
-    cout << hod1 << body << prost << body << "\n";
-    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
-}
-
-void screenydamage(string head2, string ehead, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
-    cout << "\n\n\n\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
-    cout << hod1 << head2 << prost << ehead << "\n";
-    cout << hod1 << body << prost << body << "\n";
-    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
-}
-
 void firstscreen(string head, string ehead, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
-    cout << "\n     Choose an action:\n     [1] - Attack\n     [2] - Drink Health Potion\n     [q] - Exit\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
+    cout << "\n             Choose an action:\n             [1] - Attack\n             [2] - Drink Health Potion\n             [q] - Exit\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
     cout << hod1 << head << prost << ehead << "\n";
     cout << hod1 << body << prost << body << "\n";
     cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
 }
 
+void noscreenedamage(string head, string ehead2, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
+    cout << "\n\n\n             Hit! -10 HP\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
+    cout << hod1 << head << prost << ehead2 << "\n";
+    cout << hod1 << body << prost << body << "\n";
+    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
+}
+
+void yesscreenedamage(string head, string ehead2, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
+    cout << "\n\n\n             CRITICAL HIT! -20 HP\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
+    cout << hod1 << head << prost << ehead2 << "\n";
+    cout << hod1 << body << prost << body << "\n";
+    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
+}
+
+void noscreenydamage(string head2, string ehead, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
+    cout << "\n\n\n             Hit! -10 HP\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
+    cout << hod1 << head2 << prost << ehead << "\n";
+    cout << hod1 << body << prost << body << "\n";
+    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
+}
+
+void yesscreenydamage(string head2, string ehead, string body, string legs, string hp, string ehp, string prost, int HP, int EHP, string hod1, string road, string hpehp, string hpprost){
+    cout << "\n\n\n             CRITICAL HIT! -20 HP\n\n\n" << hpprost << HP << " HP [" << hp << "]" << "  YOU" << hpehp << "MONSTER  " << "[" << ehp << "] " << EHP << " HP" << "\n\n\n";
+    cout << hod1 << head2 << prost << ehead << "\n";
+    cout << hod1 << body << prost << body << "\n";
+    cout << hod1 << legs << prost << " " << legs << "\n" << road << "\n";
+}
+
 int main() {
-    string hpehp = "                                                      ";
+    string hpehp = "                  ";
     string hpprost = "     ";
     string head = " O_O", head2 = " X_X", ehead = "O_O", ehead2 = "X_X";
-    string body = "/||\\", legs = " /\\", prost = "                                                      ", hod1 = "                                   ";
+    string body = "/||\\", legs = " /\\", prost = "                  ", hod1 = "                                   ";
     string hp = "####################", ehp = "####################";
     int HP = 100, EHP = 100;
     bool stop = false;
     srand(time(0));
     int damage;
-    string road = "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯";
+    string road = "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯";
     int sizehod1 = hod1.size();
     bool flag = false;
     int sizeprost = prost.size();
     int k = 0;
     int heal;
+    int p;
     firstscreen(head, ehead, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
     while(stop == false){
         if(kbhit() == true){
@@ -94,6 +109,7 @@ int main() {
             damage = rand() % 3;
             if(damage == 0){
                 EHP -= 20;
+                p = 20;
                 ehp.pop_back();
                 ehp.pop_back();
                 ehp.pop_back();
@@ -101,6 +117,7 @@ int main() {
             }
             else {
                 EHP -= 10;
+                p = 10;
                 ehp.pop_back();
                 ehp.pop_back();
             }
@@ -108,7 +125,12 @@ int main() {
                 cout << "\033[2J\033[H" << flush;
                 prost.push_back(' ');
                 hod1.pop_back();
-                screenedamage(head, ehead2, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                if(p == 10){
+                    noscreenedamage(head, ehead2, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                }
+                else{
+                    yesscreenedamage(head, ehead2, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                }
                 std::this_thread::sleep_for(std::chrono::milliseconds(75));
             }
             cout << "\033[2J\033[H" << flush;
@@ -162,6 +184,7 @@ int main() {
         damage = rand() % 3;
             if(damage == 0){
                 HP -= 20;
+                p = 20;
                 hp.pop_back();
                 hp.pop_back();
                 hp.pop_back();
@@ -183,6 +206,7 @@ int main() {
             }
             else {
                 HP -= 10;
+                p = 10;
                 hp.pop_back();
                 hp.pop_back();
                 if(k == 0){
@@ -199,7 +223,12 @@ int main() {
             while(prost.size() < sizeprost){
                 cout << "\033[2J\033[H" << flush;
                 prost.push_back(' ');
-                screenydamage(head2, ehead, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                if(p == 10){
+                    noscreenydamage(head2, ehead, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                }
+                else{
+                    yesscreenydamage(head2, ehead, body, legs, hp, ehp, prost, HP, EHP, hod1, road, hpehp, hpprost);
+                }
                 std::this_thread::sleep_for(std::chrono::milliseconds(75));
             }
             cout << "\033[2J\033[H" << flush;

@@ -41,6 +41,11 @@ g++ main.cpp -o pvp
 ![PVP Console Game screenshot](screen2.png)
 ![PVP Console Game screenshot](screen3.png)
 
+## Hire me
+
+Need a C++ console game or tool? Check my service on Contra:
+[C++ Console Game Development](https://contra.com/s/LcWULRQm-c-console-game-development)
+
 ## Author
 
 [Welgy](https://github.com/Welgy)
